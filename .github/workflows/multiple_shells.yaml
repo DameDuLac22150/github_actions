@@ -9,11 +9,14 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: python commands
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
+    #  - name: python commands
+    #    run: |
+    #      import platform
+    #      print(platform.processor())
+    #    shell: python
+    - name: Test bash
+      run: echo "Hello from bash!"
+      shell: bash
   run-windows-command:
     runs-on: windows-latest
     needs: ["run-shell-command"]
